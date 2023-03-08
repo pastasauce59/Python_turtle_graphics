@@ -11,14 +11,14 @@ def random_color():
     random_color = (r,g,b)
     return random_color
 
-def make_spirograph():
+def make_spirograph(size_of_gap):
     spiro.speed(0)
-    for _ in range(75):
+    for _ in range(int(360 / size_of_gap)):
         spiro.color(random_color())
         spiro.circle(120)
-        spiro.left(5)
+        spiro.left(size_of_gap)
 
-make_spirograph()
+make_spirograph(5)
 
 
 
